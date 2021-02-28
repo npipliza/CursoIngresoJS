@@ -8,11 +8,11 @@ function mostrar()
 	switch(mesDelAnio)
 	{
 		case "Febrero":
-			alert("Este mes no tiene más de 29 días.");
+			alert("Este mes no tiene mas de 29 dias.");
 			break;
 
 		default:
-			alert("Este mes tiene 30 o más días.");
+			alert("Este mes tiene 30 o mas dias.");
 			break;
 	}
 	

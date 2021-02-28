@@ -34,15 +34,20 @@ function mostrar()
 	var resultado;
 	var porcentaje;
 
-	porcentaje = 30;
-	
+	descripcion = '';
+	precio      = 0;
+	aumento     = 0;
+	resultado   = 0;
+	porcentaje  = 0;
+
 	descripcion = prompt("Ingrese descripcion: ");
 
 	precio = document.getElementById('txtIdNombre').value;
 	precio = parseInt(precio);
 	
-	aumento   = precio * porcentaje / 100;
-	resultado = precio + aumento;
+	porcentaje = 30;
+	aumento    = precio * porcentaje / 100;
+	resultado  = precio + aumento;
 	
 	alert("usted compro " + descripcion + " y el precio con aumento es: $" + resultado);
 

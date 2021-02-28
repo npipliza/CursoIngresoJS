@@ -1,27 +1,30 @@
 /*
 Debemos lograr tomar nombre y edad por ID y mostrarlos concatenados 
-ej.: "Usted se llama Jos√© y tiene 66 a√±os" 	*/
-
-function mostrar(){
-
-	var nombreIngresado;
-	var edad;
-	var apellido;
-	
-	nombreIngresado = document.getElementById('txtIdNombre').value;
-	edad = document.getElementById('txtIdEdad').value;
-	apellido = prompt("Ingrese su apellido: ");
-
-	alert("Usted se llama : " + nombreIngresado + " " + apellido + " y tiene " + edad + " aÒos");
-}
-
-
-
+ej.: "Usted se llama Jos√© y tiene 66 a√±os" 	
+*/
 /* bis :
 
 Debemos lograr tomar nombre y edad por ID , apellido por prompt ,
 y mostrarlos concatenados 
 ej.: "Usted se llama JosÈ peres y tiene 66 aÒos" 	*/
+
+function mostrar(){
+
+	var nombreIngresado;
+	var edadIngresada;
+	var apellidoIngresado;
+	
+	nombreIngresado   = '';
+	edadIngresada     = 0;
+	apellidoIngresado = '';
+
+	nombreIngresado   = document.getElementById('txtIdNombre').value;
+	edadIngresada     = document.getElementById('txtIdEdad').value;
+	apellidoIngresado = prompt("Ingrese su apellido: ");
+
+	alert("Usted se llama : " + nombreIngresado + " " + apellidoIngresado + " y tiene " + edadIngresada + " anios");
+}
+
 
  
 

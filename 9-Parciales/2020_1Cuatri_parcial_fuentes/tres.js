@@ -3,7 +3,7 @@ En el ingreso a un viaje en avion nos solicitan nombre , edad, sexo("f" o "m") y
 Curso de ingreso UTN FRA
 */
 function mostrar()
-{
+{ 
 	var nombreIngresado;
 	var edadIngresada;
 	var sexoIngresado;

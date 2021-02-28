@@ -2,33 +2,27 @@ function mostrar()
 {
 	//tomo la edad  
 	var edad;
+	edad = 0;
 
-	edad = document.getElementById('txtEdad').value;
+	edad = document.getElementById('txtIdEdad').value;
 	edad = parseInt(edad);
 
 	if(edad == 15)
 	{
-
-	}
-	
-	alert("Niña bonita");
-
-	//testing
-
-	if(edad)
-	{
-		alert(verdadero);
+		alert("verdadero");
 	}
 	else
 	{
-		alert(falso);
+		alert("falso");
 	}
+	
+	//alert("Niña bonita");
 
 }//FIN DE LA FUNCIÃ“N
 
 /*
 1-con if
-pedir a una persoan que fue de vaciones , la distancia que viajo y 
+pedir a una persoan que fue de vacaciones , la distancia que viajo y 
 el tiempo que tardo, para calcular la velocidad
 e informar:
 60 km/hr = muy lento

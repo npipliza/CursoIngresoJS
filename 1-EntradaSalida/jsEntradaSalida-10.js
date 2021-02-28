@@ -38,17 +38,24 @@ function mostrarAumento()
 	var descuento;
 	var precioFinal;
 
+	precioProducto      = 0;
+	nombreProducto      = '';
+	porcentajeDescuento = 0;
+	descuento           = 0;
+	precioFinal         = 0;
+
 	precioProducto      = document.getElementById('txtIdImporte').value;
 	precioProducto      = parseInt(precioProducto);
+
 	nombreProducto      = prompt("Ingrese el nombre del producto:");
+
 	porcentajeDescuento = prompt("Ingrese el porcentaje de descuento:");
 	porcentajeDescuento = parseInt(porcentajeDescuento);
-	
 
 	descuento   = precioProducto * porcentajeDescuento / 100;
 	precioFinal = precioProducto - descuento;
-	mensaje     = "usted compro un " + nombreProducto + " con " + descuento 
-	mensaje    += " % de descuento, el precio final es: $" + precioFinal
+	mensaje     = "usted compro un " + nombreProducto + " con " + porcentajeDescuento 
+	mensaje    += " % de descuento, el precio final es: $" + precioFinal;
 
 	document.getElementById('txtIdResultado').value = mensaje;
 

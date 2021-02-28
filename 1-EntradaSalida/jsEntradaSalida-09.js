@@ -9,15 +9,20 @@ function mostrarAumento()
 	var importe;
 	var aumento;
 	var resultado;
-	var usuario;
+	var porcentaje;
+
+	importe    = 0;
+	aumento    = 0;
+	resultado  = 0;
+	porcentaje = 0;
 	
 	importe = document.getElementById('txtIdSueldo').value;
 	importe = parseInt(importe);
 
-	usuario = prompt("Ingrese el porcentaje:");
-	usuario = parseInt(usuario);
+	porcentaje = prompt("Ingrese el porcentaje:");
+	porcentaje = parseInt(porcentaje);
 
-	aumento = importe * usuario / 100;
+	aumento   = importe * porcentaje / 100;
 	resultado = importe + aumento;
 	
 	document.getElementById('txtIdResultado').value = resultado;

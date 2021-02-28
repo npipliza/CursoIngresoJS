@@ -28,7 +28,7 @@ function mostrar()
 	contadorDe10 = 0;
 
 	      //ejecuta     //compara     //ejecuta
-	for(contador = 0; contador < 1000; contador ++)
+	for(contador = 0; contador < 100; contador ++)
 	{
 		numeroRandom = Math.floor(Math.random() * 10) + 1;
 		//console.log(numeroRandom);
@@ -37,6 +37,8 @@ function mostrar()
 			case 1:
 				contadorDe1 ++;
 		}
+		console.log(numeroRandom);
+
 	}
 }// fin de la funcion
  // break rompe el for

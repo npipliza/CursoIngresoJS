@@ -7,7 +7,7 @@ function mostrar()
 	switch(destino)
 	{
 		case "Bariloche": 
-			alert("El destino se encuentra en el Sur del pais.");
+			alert("El destino se encuentra en el Oeste del pais.");
 			break;
 
 		case "Cataratas": 
@@ -19,7 +19,7 @@ function mostrar()
 				break;
 
 		case "Ushuaia": 
-			alert("El destino se encuentra en el Oeste del pais.");
+			alert("El destino se encuentra en el Sur del pais.");
 				break;
 	}
 

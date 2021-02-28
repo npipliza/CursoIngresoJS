@@ -22,44 +22,54 @@ function mostrar()
 	contadorNegativos    = 0;
 	contadorPares        = 0;
 
-	for(contador = 0 ; contador < 2; contador ++)
-	{		
+	for(contador = 0 ; contador < 5; contador ++)
+	{					
 		numeroIngresado = prompt("Ingrese numero #" + (contador + 1));
 		numeroIngresado = parseInt(numeroIngresado);
 
 		while(isNaN(numeroIngresado) == true)
 		{
 			numeroIngresado = prompt("ERROR. Ingrese numero #" + (contador + 1));
-			numeroIngresado = parseInt(numeroIngresado);	
+			numeroIngresado = parseInt(numeroIngresado);
 		}
 
-		if(numeroIngresado < 0 && banderaMayorNegativo == 1 || numeroIngresado > mayorNegativo)
+		if(numeroIngresado < 0)
 		{		
-/*			if(banderaMayorNegativo == 1)
+			if(banderaMayorNegativo == 1 && numeroIngresado < mayorNegativo)
 			{
-				banderaMayorNegativo = 0;
-				mayorNegativo        = numeroIngresado;
+				mayorNegativo = mayorNegativo + numeroIngresado;
+				mayorNegativo = numeroIngresado;
+			}
+			else
+			{
+				if(banderaMayorNegativo == 0)
+				{
+					mayorNegativo        = numeroIngresado;
+					banderaMayorNegativo = 1;
+				}
 			}
 		}
 
 		if(numeroIngresado %2 == 0)
 		{		
-			if(banderaMenorPar == 1)
+			if(banderaMenorPar == 1 && numeroIngresado < menorPar)
 			{
-				banderaMenorPar = 0;
-				menorPar        = numeroIngresado;
+				menorPar = menorPar + numeroIngresado;	
+				menorPar = numeroIngresado;
 			}
 			else
 			{
-				if(numeroIngresado < menorPar)
-				{*/
-					mayorNegativo = numeroIngresado;
-/*				}
-			}*/
+				if(banderaMenorPar == 0)
+				{
+					menorPar        = numeroIngresado;
+					banderaMenorPar = 1;
+				}
+			}
 		}
-	}	
+	}// fin del for
 
 	console.log("El mayor de los numeros negativos es: " + mayorNegativo);
 	console.log("El menor de los numeros pares es: " + menorPar);
+
 
 }//FIN DE LA FUNCIÓN

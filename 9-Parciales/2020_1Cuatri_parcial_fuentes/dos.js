@@ -174,8 +174,8 @@ function mostrar()
   if(descuento > 0)
   {
     alert("Importe con descuento: " + totalaPagar);
+    console.log("Importe con descuento: " + totalaPagar);
   }
-  console.log("Importe con descuento: " + totalaPagar);
 
   //d) Informar el tipo con mas cantidad de bolsas.
   alert("Producto ingresado con mayor cantidad: " + productoConMasBolsas);

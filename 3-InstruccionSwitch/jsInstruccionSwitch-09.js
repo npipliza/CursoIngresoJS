@@ -50,6 +50,7 @@ function mostrar()
 
 }//FIN DE LA FUNCIÃ“N
 */
+/*
 function mostrar()
 {
 	var destino;
@@ -62,31 +63,23 @@ function mostrar()
 	destino      = document.getElementById('txtIdDestino').value;
 	estacion     = document.getElementById('txtIdEstacion').value;
 	precioBase   = 15000;
-//	precioBase   = parseInt(precioBase);
 	porcentaje   = 0;
-//	porcentaje   = parseInt(porcentaje);
 
 	if(destino == "Bariloche")//Invierno: +20% / Verano: -20% /  Otoño y Primavera: +10
 	{		
 		if(estacion == "Invierno")
 		{
 			porcentaje = 20;
-//			porcentaje = precioBase * 20 / 100;
-//			porcentaje = parseInt(porcentaje);
 		}
 		else
 		{
 			if(estacion == "Verano")
 			{
 				porcentaje = -20;
-//				porcentaje = precioBase * -20 / 100;
-//				porcentaje = parseInt(porcentaje);
 			}
 			else
 			{
 				porcentaje = 10;
-//				porcentaje = precioBase * 10 / 100;
-//				porcentaje = parseInt(porcentaje);
 			}
 		}
 	}
@@ -96,16 +89,12 @@ function mostrar()
 		if(estacion == "Invierno")
 		{
 			porcentaje = -10;
-//			porcentaje = precioBase * -10 / 100;
-//			porcentaje = parseInt(porcentaje);
 		}
 		else
 		{
 			if(estacion == "Verano")
 			{
 				porcentaje = 10;
-//				porcentaje = precioBase * 10 / 100;
-//				porcentaje = parseInt(porcentaje);
 			}
 			else
 			{
@@ -114,14 +103,10 @@ function mostrar()
 					if(destino == "Cataratas")
 					{
 						porcentaje = 10;
-//						porcentaje = precioBase * 10 / 100;
-//						porcentaje = parseInt(porcentaje);
 					}
 					else
 					{
 						porcentaje = 0;
-//						porcentaje = precioBase * 0 / 100;
-//						porcentaje = parseInt(porcentaje);
 					}
 				}
 			}
@@ -133,22 +118,16 @@ function mostrar()
 		if(estacion == "Invierno")
 		{
 			porcentaje = -20;
-//			porcentaje = precioBase * -20 / 100;
-//			porcentaje = parseInt(porcentaje);
 		}
 		else
 		{
 			if(estacion == "Verano")
 			{
 				porcentaje = 20;
-//				porcentaje = precioBase * 20 / 100;
-//				porcentaje = parseInt(porcentaje);
 			}
 			else
 			{
 				porcentaje = 10;
-//				porcentaje = precioBase * 10 / 100;
-//				porcentaje = parseInt(porcentaje);
 			}
 		}
 	}
@@ -162,4 +141,115 @@ function mostrar()
 	alert("El precio final de este destino es: $ " + viaje + ".");
 
 }//FIN DE LA FUNCIÃ“N
+*/
+function mostrar()
+{
+	var destino;
+	var estacion;
+	var precioBase;
+	var valorPorcentaje;
+	var viaje;
+	var porcentaje;
+
+	destino         = document.getElementById('txtIdDestino').value;
+	estacion        = document.getElementById('txtIdEstacion').value;
+	precioBase      = 15000;
+	porcentaje      = 0;
+	valorPorcentaje = 0;
+	viaje           = 0;
+
+	switch(destino)
+	{
+		case "Bariloche":
+			if(estacion == "Invierno")
+			{
+				porcentaje = 20;
+			}
+			else
+			{
+				if(estacion == "Verano")
+				{
+					porcentaje = -20;
+				}
+				else
+				{
+					porcentaje = 10;	
+				}
+			}	
+		break;
+
+		case "Cataratas":
+			if(estacion == "Invierno")
+			{
+				porcentaje = -10;
+			}
+			else
+			{
+				if(estacion == "Verano")
+				{
+					porcentaje = 10;
+				}
+				else
+				{
+					porcentaje = 10;	
+				}
+			}
+		break;
+
+		case "Cordoba":
+			if(estacion == "Invierno")
+			{
+				porcentaje = -10;
+			}
+			else
+			{
+				if(estacion == "Verano")
+				{
+					porcentaje = 10;
+				}
+				else
+				{
+					porcentaje = 0;	
+				}
+			}
+		break;
+
+		case "Mar del plata":
+			if(estacion == "Invierno")
+			{
+				porcentaje = -20;
+			}
+			else
+			{
+				if(estacion == "Verano")
+				{
+					porcentaje = 20;
+				}
+				else
+				{
+					porcentaje = 10;	
+				}
+			}
+		break;
+	}// fin del switch
+	
+	valorPorcentaje = precioBase * porcentaje / 100;
+	valorPorcentaje = parseInt(valorPorcentaje);
+
+	viaje = precioBase + valorPorcentaje;
+	viaje = parseInt(viaje);
+
+	alert("El precio final de este destino es: $ " + viaje + ".");
+
+}//FIN DE LA FUNCIÃ“N
+
+/*Enunciado:
+una agencia de viajes debe sacar las tarifas de los viajes , se cobra $15.000 por cada estadia como base, 
+se pide el ingreso de una estacion del año y localidad para vacacionar para poder calcular el precio final
+
+en Invierno: bariloche tiene un aumento del 20% cataratas y Cordoba tiene un descuento del 10% Mar del plata tiene un descuento del 20%
+en Verano: bariloche tiene un descuento del 20% cataratas y Cordoba tiene un aumento del 10% Mar del plata tiene un aumento del 20%
+en Otoño y Primavera: bariloche tiene un aumento del 10% cataratas tiene un aumento del 10% Mar del plata tiene un aumento del 10% y 
+Cordoba tiene el precio sin descuento*/
+
 

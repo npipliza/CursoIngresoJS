@@ -2,6 +2,7 @@ function mostrar()
 {
 	//tomo la edad  
 	var edad;
+	edad = 0;
 
 	edad = document.getElementById('txtIdEdad').value;
 	edad = parseInt(edad);

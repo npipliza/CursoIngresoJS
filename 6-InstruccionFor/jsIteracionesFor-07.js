@@ -126,16 +126,16 @@ function mostrar()
 		{
 			while(isNaN(nivelPobrezaIngresado) == true || nivelPobrezaIngresado == 1 && nivelPobrezaIngresado != 2 && nivelPobrezaIngresado != 3)
 			{
-			nivelPobrezaIngresado = prompt("ERROR.En Europa no hay paises pobres. Ingrese 2 rico, 3 muy rico.");
-			nivelPobrezaIngresado = parseInt(nivelPobrezaIngresado);
+				nivelPobrezaIngresado = prompt("ERROR.En Europa no hay paises pobres. Ingrese 2 rico, 3 muy rico.");
+				nivelPobrezaIngresado = parseInt(nivelPobrezaIngresado);
 			}
 		}
 		else
 		{
 			while(isNaN(nivelPobrezaIngresado) == true || nivelPobrezaIngresado != 1 && nivelPobrezaIngresado != 2 && nivelPobrezaIngresado != 3)
 			{
-			nivelPobrezaIngresado = prompt("ERROR. Ingrese 1 pobre, 2 rico, 3 muy rico.");
-			nivelPobrezaIngresado = parseInt(nivelPobrezaIngresado);
+				nivelPobrezaIngresado = prompt("ERROR. Ingrese 1 pobre, 2 rico, 3 muy rico.");
+				nivelPobrezaIngresado = parseInt(nivelPobrezaIngresado);
 			}
 		}
 

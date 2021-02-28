@@ -5,21 +5,33 @@ mostrar el resto entre el dividendo y el divisor.
 ej.: "El resto es 0 ."*/
 function SacarResto()
 {
-	resto = 10%2;
+	var resto;
+	var dividendo;
+	var divisor;
+
+	dividendo = 0;
+	divisor   = 0;
+	resto     = 0;
+
+	dividendo = document.getElementById('txtIdNumeroDividendo').value;
+	divisor   = document.getElementById('txtIdNumeroDivisor').value;
+
+	resto = dividendo % divisor;
+	resto = parseInt(resto);
 	console.log("El resto es: " + resto);
-	resto = 2%10;
+/* 	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	resto = 26%5;
+	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	resto = 29%5;
+	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	resto = 5%5;
+	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	resto = 26%2;
+	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	resto = 27%5;
+	resto = dividendo % divisor;
 	console.log("El resto es: " + resto);
-	
+ */	
 }
 // el resto sirve parqa saber si son numeros primos. 
-//si la division es correcta, resto muestra la cantidad de numeros enters que quedan fuera
+//si la division es correcta, resto muestra la cantidad de numeros enteros que quedan fuera
